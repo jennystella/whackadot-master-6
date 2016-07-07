@@ -12,6 +12,8 @@ import SpriteKit
 //var highScore: Int?
 //var score: Int = 50
 
+var population = 0
+
 class Grid: SKSpriteNode {
     
     /* Grid array dimensions */
@@ -146,4 +148,29 @@ class Grid: SKSpriteNode {
             
         }
     }
+    
+    func countDots(dotstate: DotColor) {
+        /* Process array and update creature status */
+        
+        /* Reset population counter */
+        population = 0
+        
+        
+        /* Loop through columns */
+        for gridX in 0..<columns {
+            
+            /* Loop through rows */
+            for gridY in 0..<rows {
+                
+                if gridArray[gridX][gridY].state == .dotstate {
+                    population += 1
+                    
+                    
+                }
+            }
+        }
+        return population
+    }
+    
+
 }
