@@ -11,40 +11,45 @@ import SpriteKit
 enum GameState{ case Title, Ready, Playing, Gameover}
 var matchLabel: SKLabelNode!
 var scoreLabel: SKLabelNode!
+var restartMenu: SKSpriteNode!
+var restartButton: MSButtonNode!
 var score: Int = 0 {
 didSet {
     scoreLabel.text = String(score)
 }
 }
-var gameState: GameState = .Ready
+var gameState: GameState = .Title
 var highScore: Int?
 
 let colorGoal = ColorGoal()
+
 
 class GameScene: SKScene {
     
     var gridNode: Grid!
     
-    var restartButton: MSButtonNode!
-    var restartMenu: SKSpriteNode!
-    var anyColorNode: SKNode!
+    //var anyColorNode: SKNode!
     
     
     override func didMoveToView(view: SKView) {
+        scene?.addChild(colorGoal)
+        print(colorGoal.parent)
+
+        
         /* Setup your scene here */
 
+        gameState = .Ready
         
         gridNode = childNodeWithName("gridNode") as! Grid
         scoreLabel = childNodeWithName("scoreLabel") as! SKLabelNode
         matchLabel = childNodeWithName("scoreLabel") as! SKLabelNode
-        anyColorNode = childNodeWithName("anyColorNode")
-        anyColorNode.hidden = true
+        //anyColorNode = childNodeWithName("anyColorNode")
+        //anyColorNode.hidden = true
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
         restartMenu.alpha = 0.0
         
         
         restartButton = childNodeWithName("restartButton") as! MSButtonNode
-        
         /* Setup restart button selection handler */
         restartButton.selectedHandler = {
             
@@ -53,6 +58,9 @@ class GameScene: SKScene {
             
             /* Load Game scene */
             let scene = GameScene(fileNamed:"GameScene") as GameScene!
+            
+            //Resets the score for each round :^)
+            score = 0
             
             /* Ensure correct aspect mode */
             scene.scaleMode = .AspectFill
@@ -111,23 +119,30 @@ class GameScene: SKScene {
     }
     
     
+
     func gameover(){
         
         gameState = .Gameover
         
+        //Reseting the colour of the circle and removing when game is over
+        colorGoal.state = .inactive
+        colorGoal.removeFromParent()
+        
         /* Grab reference to our SpriteKit view */
         let skView = self.view as SKView!
+        
         
         /* Load Game scene */
         let scene = GameScene(fileNamed:"GameScene") as GameScene!
         
         /* Ensure correct aspect mode */
+        
+        
         scene.scaleMode = .AspectFill
         restartMenu.alpha = 1.0
         restartButton.state = .Active
         
         if restartButton.state == .Hidden{
-            
             /* Restart GameScene */
             skView.presentScene(scene)
             
@@ -138,7 +153,6 @@ class GameScene: SKScene {
         
     }
 
-    
     
     
 }

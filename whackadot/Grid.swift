@@ -66,6 +66,7 @@ class Grid: SKSpriteNode {
                     }
                 } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
                     gameState = .Gameover
+                    GameScene().gameover()
                 }
             }
             
