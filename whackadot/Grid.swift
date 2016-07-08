@@ -13,8 +13,6 @@ import SpriteKit
 //var score: Int = 50
 
 
-var population: Int = 0
-
 class Grid: SKSpriteNode {
     
     /* Grid array dimensions */
@@ -25,7 +23,7 @@ class Grid: SKSpriteNode {
     var cellWidth = 0
     var cellHeight = 0
     
-    /* Creature Array */
+    /* dot Array */
     var gridArray = [[Dot]]()
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -40,14 +38,35 @@ class Grid: SKSpriteNode {
             /* Calculate grid array position */
             let gridX = Int(location.x) / cellWidth
             let gridY = Int(location.y) / cellHeight
-                        
+            
             /* Clearing a dot*/
             let dot = gridArray[gridX][gridY]
+            
             if dot.state != .inactive {
-                dot.state = .inactive
-                
-            //Add to score
-           // highScore = 50
+                if colorGoal.state == .inactive {
+                    //Set the new Color Goal
+                    colorGoal.state = dot.state
+                    
+                    //Clear the dot
+                    dot.state = .inactive
+                    
+                    //Add to score
+                    score += 160
+                } else if colorGoal.state != .inactive && colorGoal.state == dot.state {
+                    //Clear the dot
+                    dot.state = .inactive
+                    
+                    //Add to score
+                    score += 160
+                    
+                    // Check to see if there are any remaining dots of the same/goal color
+                    let colorCount = countDots(dot.state)
+                    if colorCount <= 0 {
+                        colorGoal.state = .inactive
+                    }
+                } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
+                    gameState = .Gameover
+                }
             }
             
             
@@ -64,12 +83,12 @@ class Grid: SKSpriteNode {
         /* Calculate individual cell dimensions */
         cellWidth = Int(size.width) / columns
         cellHeight = Int(size.height) / rows
-        /* Populate grid with creatures */
+        /* Populate grid with dots */
         populateGrid()
     }
     
     func populateGrid() {
-        /* Populate the grid with creatures */
+        /* Populate the grid with dots */
         
         /* Loop through columns */
         for gridX in 0..<columns {
@@ -80,7 +99,7 @@ class Grid: SKSpriteNode {
             /* Loop through rows */
             for gridY in 0..<rows {
                 
-                /* Create a new creature at row / column position */
+                /* Create a new dot at row / column position */
                 addDotAtGrid(x:gridX, y:gridY)
             }
         }
@@ -90,16 +109,12 @@ class Grid: SKSpriteNode {
         //Initialize a new dot object
         let dot = Dot()
         
-        
         //Convert the row/column position into a grid screen position
         let gridPosition = CGPoint(x: x*cellWidth, y: y*cellHeight)
         dot.position = gridPosition
         
         dot.xScale = CGFloat((320.0/CGFloat(rows))/(60.0))
         dot.yScale = CGFloat((320.0/CGFloat(columns))/(60.0))
-        
-        print(dot.xScale)
-        print(dot.yScale)
         
         //Add dot as a child of the grid node
         addChild(dot)
@@ -150,13 +165,12 @@ class Grid: SKSpriteNode {
         }
     }
     
-
-
-      func countDots(dotstate: DotColor) -> Int{
-        /* Process array and update creature status */
+    
+    
+    func countDots(dotstate: DotColor) -> Int{
+        /* Process array and update dot status */
+        var population: Int = 0
         
-        /* Reset population counter */
-        population = 0
         
         
         /* Loop through columns */
@@ -175,5 +189,5 @@ class Grid: SKSpriteNode {
         return population
     }
     
-
+    
 }

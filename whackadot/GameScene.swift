@@ -9,21 +9,39 @@
 import SpriteKit
 
 enum GameState{ case Title, Ready, Playing, Gameover}
+var matchLabel: SKLabelNode!
+var scoreLabel: SKLabelNode!
+var score: Int = 0 {
+didSet {
+    scoreLabel.text = String(score)
+}
+}
+var gameState: GameState = .Ready
+var highScore: Int?
+
+let colorGoal = ColorGoal()
 
 class GameScene: SKScene {
     
     var gridNode: Grid!
-    var state: GameState = .Title
+    
     var restartButton: MSButtonNode!
     var restartMenu: SKSpriteNode!
+    var anyColorNode: SKNode!
     
     
     override func didMoveToView(view: SKView) {
         /* Setup your scene here */
+
+        
         gridNode = childNodeWithName("gridNode") as! Grid
+        scoreLabel = childNodeWithName("scoreLabel") as! SKLabelNode
+        matchLabel = childNodeWithName("scoreLabel") as! SKLabelNode
+        anyColorNode = childNodeWithName("anyColorNode")
+        anyColorNode.hidden = true
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
         restartMenu.alpha = 0.0
-
+        
         
         restartButton = childNodeWithName("restartButton") as! MSButtonNode
         
@@ -75,52 +93,54 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        
+        print(colorGoal.state)
         if gridNode.countDots(.inactive) == 0 {
-        gameover()
-}
+            gameover()
+        }
         
     }
     
     func time () {
         
         //Makes the game unable to recreate circles once game is over
-        if state == .Gameover{return}
+        if gameState == .Gameover{return}
         
         
         gridNode.addDotToEmptyGrid()
         
     }
     
+    
     func gameover(){
         
-        state = .Gameover
+        gameState = .Gameover
         
-            /* Grab reference to our SpriteKit view */
-            let skView = self.view as SKView!
-            
-            /* Load Game scene */
-            let scene = GameScene(fileNamed:"GameScene") as GameScene!
-            
-            /* Ensure correct aspect mode */
-            scene.scaleMode = .AspectFill
-            restartMenu.alpha = 1.0
-            restartButton.state = .Active
+        /* Grab reference to our SpriteKit view */
+        let skView = self.view as SKView!
+        
+        /* Load Game scene */
+        let scene = GameScene(fileNamed:"GameScene") as GameScene!
+        
+        /* Ensure correct aspect mode */
+        scene.scaleMode = .AspectFill
+        restartMenu.alpha = 1.0
+        restartButton.state = .Active
         
         if restartButton.state == .Hidden{
-
+            
             /* Restart GameScene */
             skView.presentScene(scene)
             
             /* Start game */
-            self.state = .Ready
+            gameState = .Ready
             
         }
         
     }
-    
-    
+
     
     
     
 }
+
+

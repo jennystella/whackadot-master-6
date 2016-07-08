@@ -11,39 +11,46 @@ import Foundation
 import SpriteKit
 
 
-enum DotColor { case inactive, color1, color2, color3, color4, color5 }
-
-class Dot: SKSpriteNode {
+class ColorGoal: SKSpriteNode {
     
     /* Character side */
-    var state:DotColor = .inactive
+    var state: DotColor = .inactive
         {
         
         didSet {
             
             switch state {
             case .inactive:
+                // hide the ColorGoal Sprite
                 hidden = true
                 
+                // show the Any Color Goal Node
+                parent?.childNodeWithName("anyColorNode")?.hidden = false
+                break
+                
             case .color1:
+                parent?.childNodeWithName("anyColorNode")?.hidden = true
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot1"))
                 runAction(action)
                 hidden = false
                 break;
                 
             case .color2:
+                parent?.childNodeWithName("anyColorNode")?.hidden = true
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot2"))
                 runAction(action)
                 hidden = false
                 break;
                 
             case .color3:
+                parent?.childNodeWithName("anyColorNode")?.hidden = true
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot3"))
                 runAction(action)
                 hidden = false
                 break;
                 
             case .color4:
+                parent?.childNodeWithName("anyColorNode")?.hidden = true
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot4"))
                 runAction(action)
                 hidden = false
@@ -78,6 +85,8 @@ class Dot: SKSpriteNode {
         /* Set Z-Position, ensure it's on top of grid */
         zPosition = 1
         
+        position = CGPoint(x: 96, y: 504)
+        setScale(0.9)
         
         /* Set anchor point to bottom-left */
         anchorPoint = CGPoint(x: 0, y: 0)

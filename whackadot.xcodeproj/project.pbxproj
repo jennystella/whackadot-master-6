@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9611003C1D2FA742004CCDE5 /* AnyColorSpark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */; };
+		9611003D1D2FA742004CCDE5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9611003B1D2FA742004CCDE5 /* spark.png */; };
+		964B63B71D2FA14F00CCDC18 /* ColorGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */; };
+		964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */ = {isa = PBXBuildFile; fileRef = 964B63B81D2FA3B600CCDC18 /* AnyColor.sks */; };
 		9655D92C1D2D71E700E0C1A9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92B1D2D71E700E0C1A9 /* Grid.swift */; };
 		9655D92E1D2D74BD00E0C1A9 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92D1D2D74BD00E0C1A9 /* Dot.swift */; };
 		96BE3DA21D2C6E6C000D4408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */; };
@@ -31,7 +35,6 @@
 		96FE2F481D2DBF0E00D9951D /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F3C1D2DBF0E00D9951D /* SKTTimingFunctions.swift */; };
 		96FE2F491D2DBF0E00D9951D /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F3D1D2DBF0E00D9951D /* Vector3.swift */; };
 		CC2F93E31D2F453D00C7A854 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */; };
-		CCB3EC761D2ECDD3000FF548 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3EC751D2ECDD3000FF548 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColorSpark.sks; sourceTree = "<group>"; };
+		9611003B1D2FA742004CCDE5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGoal.swift; sourceTree = "<group>"; };
+		964B63B81D2FA3B600CCDC18 /* AnyColor.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColor.sks; sourceTree = "<group>"; };
 		9655D92B1D2D71E700E0C1A9 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		9655D92D1D2D74BD00E0C1A9 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		96BE3D9E1D2C6E6C000D4408 /* whackadot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whackadot.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,7 +89,6 @@
 		96FE2F3C1D2DBF0E00D9951D /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		96FE2F3D1D2DBF0E00D9951D /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
 		CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
-		CCB3EC751D2ECDD3000FF548 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,13 +140,16 @@
 			isa = PBXGroup;
 			children = (
 				96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */,
-				96BE3DA31D2C6E6C000D4408 /* GameScene.sks */,
 				CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */,
 				96FE2F311D2DBF0E00D9951D /* SKTUtils */,
+				96BE3DA31D2C6E6C000D4408 /* GameScene.sks */,
+				964B63B81D2FA3B600CCDC18 /* AnyColor.sks */,
+				9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */,
+				9611003B1D2FA742004CCDE5 /* spark.png */,
 				9655D92B1D2D71E700E0C1A9 /* Grid.swift */,
 				9655D92D1D2D74BD00E0C1A9 /* Dot.swift */,
+				964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */,
 				96BE3DA51D2C6E6C000D4408 /* GameScene.swift */,
-				CCB3EC751D2ECDD3000FF548 /* GameManager.swift */,
 				96BE3DA71D2C6E6C000D4408 /* GameViewController.swift */,
 				96BE3DA91D2C6E6C000D4408 /* Main.storyboard */,
 				96BE3DAE1D2C6E6C000D4408 /* LaunchScreen.storyboard */,
@@ -293,6 +302,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96BE3DA41D2C6E6C000D4408 /* GameScene.sks in Resources */,
+				964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */,
+				9611003C1D2FA742004CCDE5 /* AnyColorSpark.sks in Resources */,
+				9611003D1D2FA742004CCDE5 /* spark.png in Resources */,
 				96BE3DB01D2C6E6C000D4408 /* LaunchScreen.storyboard in Resources */,
 				96BE3DAD1D2C6E6C000D4408 /* Assets.xcassets in Resources */,
 				96BE3DAB1D2C6E6C000D4408 /* Main.storyboard in Resources */,
@@ -321,9 +333,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				96FE2F3F1D2DBF0E00D9951D /* CGPoint+Extensions.swift in Sources */,
-				CCB3EC761D2ECDD3000FF548 /* GameManager.swift in Sources */,
 				96FE2F471D2DBF0E00D9951D /* SKTEffects.swift in Sources */,
 				96FE2F421D2DBF0E00D9951D /* SKAction+Extensions.swift in Sources */,
+				964B63B71D2FA14F00CCDC18 /* ColorGoal.swift in Sources */,
 				96BE3DA61D2C6E6C000D4408 /* GameScene.swift in Sources */,
 				96FE2F451D2DBF0E00D9951D /* SKNode+Extensions.swift in Sources */,
 				9655D92E1D2D74BD00E0C1A9 /* Dot.swift in Sources */,
