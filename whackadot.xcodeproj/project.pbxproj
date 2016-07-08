@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9611003C1D2FA742004CCDE5 /* AnyColorSpark.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */; };
 		9611003D1D2FA742004CCDE5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9611003B1D2FA742004CCDE5 /* spark.png */; };
+		961100401D3058A0004CCDE5 /* clearDot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9611003E1D3058A0004CCDE5 /* clearDot.wav */; };
+		961100411D3058A0004CCDE5 /* clearColor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9611003F1D3058A0004CCDE5 /* clearColor.wav */; };
 		964B63B71D2FA14F00CCDC18 /* ColorGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */; };
 		964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */ = {isa = PBXBuildFile; fileRef = 964B63B81D2FA3B600CCDC18 /* AnyColor.sks */; };
 		9655D92C1D2D71E700E0C1A9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92B1D2D71E700E0C1A9 /* Grid.swift */; };
@@ -57,6 +59,8 @@
 /* Begin PBXFileReference section */
 		9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColorSpark.sks; sourceTree = "<group>"; };
 		9611003B1D2FA742004CCDE5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		9611003E1D3058A0004CCDE5 /* clearDot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clearDot.wav; sourceTree = "<group>"; };
+		9611003F1D3058A0004CCDE5 /* clearColor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clearColor.wav; sourceTree = "<group>"; };
 		964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGoal.swift; sourceTree = "<group>"; };
 		964B63B81D2FA3B600CCDC18 /* AnyColor.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColor.sks; sourceTree = "<group>"; };
 		9655D92B1D2D71E700E0C1A9 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -67,7 +71,7 @@
 		96BE3DA51D2C6E6C000D4408 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		96BE3DA71D2C6E6C000D4408 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		96BE3DAA1D2C6E6C000D4408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../whackadot/Assets.xcassets; sourceTree = "<group>"; };
+		96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96BE3DAF1D2C6E6C000D4408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96BE3DB11D2C6E6C000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96BE3DB61D2C6E6C000D4408 /* whackadotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,10 +145,13 @@
 			children = (
 				96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */,
 				CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */,
+				96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */,
 				96FE2F311D2DBF0E00D9951D /* SKTUtils */,
 				96BE3DA31D2C6E6C000D4408 /* GameScene.sks */,
 				964B63B81D2FA3B600CCDC18 /* AnyColor.sks */,
 				9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */,
+				9611003E1D3058A0004CCDE5 /* clearDot.wav */,
+				9611003F1D3058A0004CCDE5 /* clearColor.wav */,
 				9611003B1D2FA742004CCDE5 /* spark.png */,
 				9655D92B1D2D71E700E0C1A9 /* Grid.swift */,
 				9655D92D1D2D74BD00E0C1A9 /* Dot.swift */,
@@ -170,7 +177,6 @@
 		96BE3DC41D2C6E6C000D4408 /* whackadotUITests */ = {
 			isa = PBXGroup;
 			children = (
-				96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */,
 				96BE3DC51D2C6E6D000D4408 /* whackadotUITests.swift */,
 				96BE3DC71D2C6E6D000D4408 /* Info.plist */,
 			);
@@ -264,7 +270,7 @@
 				TargetAttributes = {
 					96BE3D9D1D2C6E6C000D4408 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 6EV3UD9SXH;
+						DevelopmentTeam = BZC5V9PB4N;
 					};
 					96BE3DB51D2C6E6C000D4408 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -303,10 +309,12 @@
 			files = (
 				96BE3DA41D2C6E6C000D4408 /* GameScene.sks in Resources */,
 				964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */,
+				961100411D3058A0004CCDE5 /* clearColor.wav in Resources */,
 				9611003C1D2FA742004CCDE5 /* AnyColorSpark.sks in Resources */,
 				9611003D1D2FA742004CCDE5 /* spark.png in Resources */,
 				96BE3DB01D2C6E6C000D4408 /* LaunchScreen.storyboard in Resources */,
 				96BE3DAD1D2C6E6C000D4408 /* Assets.xcassets in Resources */,
+				961100401D3058A0004CCDE5 /* clearDot.wav in Resources */,
 				96BE3DAB1D2C6E6C000D4408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
