@@ -30,47 +30,72 @@ class Grid: SKSpriteNode {
         /* Called when a touch begins */
         
         /* There will only be one touch as multi touch is not enabled by default */
-        for touch in touches {
-            
-            /* Grab position of touch relative to the grid */
-            let location  = touch.locationInNode(self)
-            
-            /* Calculate grid array position */
-            let gridX = Int(location.x) / cellWidth
-            let gridY = Int(location.y) / cellHeight
-            
-            /* Clearing a dot*/
-            let dot = gridArray[gridX][gridY]
-            
-            if dot.state != .inactive {
-                if colorGoal.state == .inactive {
-                    //Set the new Color Goal
-                    colorGoal.state = dot.state
-                    
-                    //Clear the dot
-                    dot.state = .inactive
-                    
-                    //Add to score
-                    score += 160
-                } else if colorGoal.state != .inactive && colorGoal.state == dot.state {
-                    //Clear the dot
-                    dot.state = .inactive
-                    
-                    //Add to score
-                    score += 160
-                    
-                    // Check to see if there are any remaining dots of the same/goal color
-                    let colorCount = countDots(dot.state)
-                    if colorCount <= 0 {
-                        colorGoal.state = .inactive
+        if gameState != .Gameover {
+            for touch in touches {
+                
+                /* Grab position of touch relative to the grid */
+                let location  = touch.locationInNode(self)
+                
+                /* Calculate grid array position */
+                let gridX = Int(location.x) / cellWidth
+                let gridY = Int(location.y) / cellHeight
+                
+                /* Clearing a dot*/
+                let dot = gridArray[gridX][gridY]
+                
+                if dot.state != .inactive {
+                    if colorGoal.state == .inactive {
+                        
+                        let dotState = dot.state
+                        //Set the new Color Goal
+                        colorGoal.state = dot.state
+                        
+                        //Clear the dot
+                        dot.state = .inactive
+                        
+                        // Check to see if there are any remaining dots of the same/goal color
+                        let colorCount = countDots(dotState)
+                        if colorCount <= 0 {
+                            colorGoal.state = .inactive
+                            
+                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            self.runAction(clearColor)
+                        }
+                        
+                        //Add to score
+                        score += 160
+                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        self.runAction(clearDot)
+                        
+                    } else if colorGoal.state != .inactive && colorGoal.state == dot.state {
+                        
+                        let dotState = dot.state
+                        
+                        //Clear the dot
+                        dot.state = .inactive
+                        
+                        //Add to score
+                        score += 160
+                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        self.runAction(clearDot)
+                        
+                        // Check to see if there are any remaining dots of the same/goal color
+                        let colorCount = countDots(dotState)
+                        if colorCount <= 0 {
+                            colorGoal.state = .inactive
+                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            self.runAction(clearColor)
+                        }
+                    } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
+                        gameState = .Gameover
+                        let gameOver = SKAction.playSoundFileNamed("//gameOver", waitForCompletion: false)
+                        self.runAction(gameOver)
+                        GameScene().gameover()
                     }
-                } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
-                    gameState = .Gameover
-                    GameScene().gameover()
                 }
+                
+                
             }
-            
-            
         }
     }
     

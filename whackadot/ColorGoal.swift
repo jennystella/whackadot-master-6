@@ -15,9 +15,9 @@ class ColorGoal: SKSpriteNode {
     
     init() {
         /* Initialize with 'dot' asset */
-        let texture = SKTexture(imageNamed: "Dot1")
+        let texture = SKTexture(imageNamed: "anycolor")
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        hidden = true
+        hidden = false
         
         /* Set Z-Position, ensure it's on top of grid */
         zPosition = 1
@@ -28,9 +28,10 @@ class ColorGoal: SKSpriteNode {
         /* Set anchor point to bottom-left */
         anchorPoint = CGPoint(x: 0, y: 0)
         
-        let resourcePath = NSBundle.mainBundle().pathForResource("AnyColor", ofType: "sks")
-        let anycolor = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
-        colorGoal.addChild(anycolor)
+        
+//        let resourcePath = NSBundle.mainBundle().pathForResource("AnyColor", ofType: "sks")
+//        let anycolor = SKReferenceNode (URL: NSURL (fileURLWithPath: resourcePath!))
+//        colorGoal.addChild(anycolor)
         
         
     }
@@ -45,51 +46,53 @@ class ColorGoal: SKSpriteNode {
             case .inactive:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "anycolor"))
                 runAction(action)
+                let particles = SKEmitterNode(fileNamed: "AnyColorSpark")!
+        
+                /* Restrict total particles to reduce runtime of particle */
+                particles.numParticlesToEmit = 25
+                particles.position = CGPoint(x: 96, y: 504)
+                particles.zPosition = CGFloat(3)
+                /* Add particles to scene */
+                addChild(particles)
                 hidden = false
-                break;
+
+                break
                 
             case .color1:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot1"))
                 runAction(action)
-                hidden = false
+                self.hidden = false
                 break;
                 
             case .color2:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot2"))
                 runAction(action)
-                hidden = false
+                self.hidden = false
                 break;
                 
             case .color3:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot3"))
                 runAction(action)
-                hidden = false
+                self.hidden = false
                 break;
                 
             case .color4:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot4"))
                 runAction(action)
-                hidden = false
+                self.hidden = false
                 break;
             
             case .color5:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot5"))
                 runAction(action)
-                hidden = false
+                self.hidden = false
                 break;
             
             }
         }
         
     }
-    
-    //    var isAlive: Bool = false {
-    //        didSet {
-    //            /* Visibility */
-    //            hidden = !isAlive
-    //        }
-    //    }
-    
+
     
 
     

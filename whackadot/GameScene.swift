@@ -13,6 +13,8 @@ var matchLabel: SKLabelNode!
 var scoreLabel: SKLabelNode!
 var restartMenu: SKSpriteNode!
 var restartButton: MSButtonNode!
+var finalScoreLabel: SKLabelNode!
+
 var score: Int = 0 {
 didSet {
     scoreLabel.text = String(score)
@@ -22,7 +24,11 @@ var gameState: GameState = .Title
 var highScore: Int?
 
 let colorGoal = ColorGoal()
-
+var spark: Bool = false{
+didSet {
+    
+}
+}
 
 class GameScene: SKScene {
     
@@ -38,15 +44,17 @@ class GameScene: SKScene {
         
         /* Setup your scene here */
 
+
         gameState = .Ready
         
         gridNode = childNodeWithName("gridNode") as! Grid
         scoreLabel = childNodeWithName("scoreLabel") as! SKLabelNode
-        matchLabel = childNodeWithName("scoreLabel") as! SKLabelNode
+        matchLabel = childNodeWithName("matchLabel") as! SKLabelNode
+        finalScoreLabel = childNodeWithName("//finalScoreLabel") as! SKLabelNode
         //anyColorNode = childNodeWithName("anyColorNode")
         //anyColorNode.hidden = true
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
-        restartMenu.alpha = 0.0
+        restartMenu.hidden = true
         
         
         restartButton = childNodeWithName("restartButton") as! MSButtonNode
@@ -110,7 +118,7 @@ class GameScene: SKScene {
     
     func time () {
         
-        //Makes the game unable to recreate circles once game is over
+        //Makes the game unable to spawn dots once game is over
         if gameState == .Gameover{return}
         
         
@@ -124,6 +132,9 @@ class GameScene: SKScene {
         
         gameState = .Gameover
         
+        
+        
+        finalScoreLabel.text = String(score)
         //Reseting the colour of the circle and removing when game is over
         colorGoal.state = .inactive
         colorGoal.removeFromParent()
@@ -139,8 +150,9 @@ class GameScene: SKScene {
         
         
         scene.scaleMode = .AspectFill
-        restartMenu.alpha = 1.0
+        restartMenu.hidden = false
         restartButton.state = .Active
+
         
         if restartButton.state == .Hidden{
             /* Restart GameScene */
