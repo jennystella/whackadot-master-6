@@ -84,7 +84,7 @@ class GameScene: SKScene {
     
     func time () {
         
-        //Makes the player unable to tap on the circles when it is game over
+        //Makes the game unable to recreate circles once game is over
         if state == .Gameover{return}
         
         
