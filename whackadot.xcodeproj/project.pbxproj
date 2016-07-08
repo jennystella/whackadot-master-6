@@ -11,6 +11,7 @@
 		9611003D1D2FA742004CCDE5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 9611003B1D2FA742004CCDE5 /* spark.png */; };
 		961100401D3058A0004CCDE5 /* clearDot.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9611003E1D3058A0004CCDE5 /* clearDot.wav */; };
 		961100411D3058A0004CCDE5 /* clearColor.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9611003F1D3058A0004CCDE5 /* clearColor.wav */; };
+		961100431D306385004CCDE5 /* gameOver.wav in Resources */ = {isa = PBXBuildFile; fileRef = 961100421D306385004CCDE5 /* gameOver.wav */; };
 		964B63B71D2FA14F00CCDC18 /* ColorGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */; };
 		964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */ = {isa = PBXBuildFile; fileRef = 964B63B81D2FA3B600CCDC18 /* AnyColor.sks */; };
 		9655D92C1D2D71E700E0C1A9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92B1D2D71E700E0C1A9 /* Grid.swift */; };
@@ -61,6 +62,7 @@
 		9611003B1D2FA742004CCDE5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		9611003E1D3058A0004CCDE5 /* clearDot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clearDot.wav; sourceTree = "<group>"; };
 		9611003F1D3058A0004CCDE5 /* clearColor.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = clearColor.wav; sourceTree = "<group>"; };
+		961100421D306385004CCDE5 /* gameOver.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gameOver.wav; sourceTree = "<group>"; };
 		964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorGoal.swift; sourceTree = "<group>"; };
 		964B63B81D2FA3B600CCDC18 /* AnyColor.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColor.sks; sourceTree = "<group>"; };
 		9655D92B1D2D71E700E0C1A9 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */,
 				9611003E1D3058A0004CCDE5 /* clearDot.wav */,
 				9611003F1D3058A0004CCDE5 /* clearColor.wav */,
+				961100421D306385004CCDE5 /* gameOver.wav */,
 				9611003B1D2FA742004CCDE5 /* spark.png */,
 				9655D92B1D2D71E700E0C1A9 /* Grid.swift */,
 				9655D92D1D2D74BD00E0C1A9 /* Dot.swift */,
@@ -311,6 +314,7 @@
 				964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */,
 				961100411D3058A0004CCDE5 /* clearColor.wav in Resources */,
 				9611003C1D2FA742004CCDE5 /* AnyColorSpark.sks in Resources */,
+				961100431D306385004CCDE5 /* gameOver.wav in Resources */,
 				9611003D1D2FA742004CCDE5 /* spark.png in Resources */,
 				96BE3DB01D2C6E6C000D4408 /* LaunchScreen.storyboard in Resources */,
 				96BE3DAD1D2C6E6C000D4408 /* Assets.xcassets in Resources */,
