@@ -30,6 +30,7 @@
 		96FE2F471D2DBF0E00D9951D /* SKTEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F3B1D2DBF0E00D9951D /* SKTEffects.swift */; };
 		96FE2F481D2DBF0E00D9951D /* SKTTimingFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F3C1D2DBF0E00D9951D /* SKTTimingFunctions.swift */; };
 		96FE2F491D2DBF0E00D9951D /* Vector3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F3D1D2DBF0E00D9951D /* Vector3.swift */; };
+		CC2F93E31D2F453D00C7A854 /* MSButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */; };
 		CCB3EC761D2ECDD3000FF548 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB3EC751D2ECDD3000FF548 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		96FE2F3B1D2DBF0E00D9951D /* SKTEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTEffects.swift; sourceTree = "<group>"; };
 		96FE2F3C1D2DBF0E00D9951D /* SKTTimingFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTTimingFunctions.swift; sourceTree = "<group>"; };
 		96FE2F3D1D2DBF0E00D9951D /* Vector3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector3.swift; sourceTree = "<group>"; };
+		CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MSButtonNode.swift; sourceTree = "<group>"; };
 		CCB3EC751D2ECDD3000FF548 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 			children = (
 				96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */,
 				96BE3DA31D2C6E6C000D4408 /* GameScene.sks */,
+				CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */,
 				96FE2F311D2DBF0E00D9951D /* SKTUtils */,
 				9655D92B1D2D71E700E0C1A9 /* Grid.swift */,
 				9655D92D1D2D74BD00E0C1A9 /* Dot.swift */,
@@ -335,6 +338,7 @@
 				96FE2F461D2DBF0E00D9951D /* SKTAudio.swift in Sources */,
 				96FE2F3E1D2DBF0E00D9951D /* CGFloat+Extensions.swift in Sources */,
 				9655D92C1D2D71E700E0C1A9 /* Grid.swift in Sources */,
+				CC2F93E31D2F453D00C7A854 /* MSButtonNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

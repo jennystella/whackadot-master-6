@@ -12,6 +12,7 @@ import SpriteKit
 //var highScore: Int?
 //var score: Int = 50
 
+
 var population: Int = 0
 
 class Grid: SKSpriteNode {
@@ -39,7 +40,7 @@ class Grid: SKSpriteNode {
             /* Calculate grid array position */
             let gridX = Int(location.x) / cellWidth
             let gridY = Int(location.y) / cellHeight
-            
+                        
             /* Clearing a dot*/
             let dot = gridArray[gridX][gridY]
             if dot.state != .inactive {
@@ -57,7 +58,7 @@ class Grid: SKSpriteNode {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        /* Enable own touch implementation for this node */
+        /* Enable own touch implefmentation for this node */
         userInteractionEnabled = true
         
         /* Calculate individual cell dimensions */
@@ -149,7 +150,9 @@ class Grid: SKSpriteNode {
         }
     }
     
-    func countDots(dotstate: DotColor) -> Int {
+
+
+      func countDots(dotstate: DotColor) -> Int{
         /* Process array and update creature status */
         
         /* Reset population counter */
