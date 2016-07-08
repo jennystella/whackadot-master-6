@@ -54,7 +54,7 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        if Grid.countDots(.inactive) == 0{
+        if gridNode.countDots(.inactive) == 0{
         gameover()
 }
         

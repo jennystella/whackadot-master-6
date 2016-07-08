@@ -12,7 +12,7 @@ import SpriteKit
 //var highScore: Int?
 //var score: Int = 50
 
-var population = 0
+var population: Int = 0
 
 class Grid: SKSpriteNode {
     
@@ -149,7 +149,7 @@ class Grid: SKSpriteNode {
         }
     }
     
-    func countDots(dotstate: DotColor) {
+    func countDots(dotstate: DotColor) -> Int {
         /* Process array and update creature status */
         
         /* Reset population counter */
@@ -162,7 +162,7 @@ class Grid: SKSpriteNode {
             /* Loop through rows */
             for gridY in 0..<rows {
                 
-                if gridArray[gridX][gridY].state == .dotstate {
+                if gridArray[gridX][gridY].state == dotstate {
                     population += 1
                     
                     
