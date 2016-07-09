@@ -71,7 +71,7 @@ class GameScene: SKScene {
             score = 0
             
             /* Ensure correct aspect mode */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .AspectFit
             
             /* Restart game scene */
             skView.presentScene(scene)
@@ -149,7 +149,7 @@ class GameScene: SKScene {
         /* Ensure correct aspect mode */
         
         
-        scene.scaleMode = .AspectFill
+        scene.scaleMode = .AspectFit
         restartMenu.hidden = false
         restartButton.state = .Active
 
