@@ -6,6 +6,7 @@
 //  Copyright (c) 2016 Tassos & Jenny Inc. All rights reserved.
 //
 
+import Foundation
 import SpriteKit
 
 enum GameState{ case Title, Ready, Playing, Gameover}
@@ -39,7 +40,7 @@ class GameScene: SKScene {
     
     override func didMoveToView(view: SKView) {
         scene?.addChild(colorGoal)
-        print(colorGoal.parent)
+    
 
         
         /* Setup your scene here */
@@ -109,7 +110,6 @@ class GameScene: SKScene {
     
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
-        print(colorGoal.state)
         if gridNode.countDots(.inactive) == 0 {
             gameover()
         }

@@ -75,6 +75,8 @@ class Dot: SKSpriteNode {
         super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
         hidden = true
         
+        size.height = 60
+        size.width = 60
         /* Set Z-Position, ensure it's on top of grid */
         zPosition = 1
         
