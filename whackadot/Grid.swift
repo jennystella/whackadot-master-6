@@ -64,6 +64,15 @@ class Grid: SKSpriteNode {
                         
                         //Add to score
                         score += 160
+                        
+                        // Evaluate & Set High Score
+                        if score > (gameManager.highScore) {
+                            gameManager.highScore = score
+                            highScoreLabel.text = String(gameManager.highScore)
+                            finalHiScoreLabel.text = String(gameManager.highScore)
+                            
+                        }
+                        
                         let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
                         self.runAction(clearDot)
                         

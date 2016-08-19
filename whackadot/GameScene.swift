@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import GameKit
 
 enum GameState{ case Title, Ready, Playing, Gameover}
 var matchLabel: SKLabelNode!
@@ -15,6 +16,8 @@ var scoreLabel: SKLabelNode!
 var restartMenu: SKSpriteNode!
 var restartButton: MSButtonNode!
 var finalScoreLabel: SKLabelNode!
+var highScoreLabel: SKLabelNode!
+var finalHiScoreLabel: SKLabelNode!
 
 var score: Int = 0 {
 didSet {
@@ -31,9 +34,12 @@ didSet {
 }
 }
 
+let gameManager = GameManager.sharedInstance
+
 class GameScene: SKScene {
     
     var gridNode: Grid!
+    
     
     //var anyColorNode: SKNode!
     
@@ -52,6 +58,7 @@ class GameScene: SKScene {
         scoreLabel = childNodeWithName("scoreLabel") as! SKLabelNode
         matchLabel = childNodeWithName("matchLabel") as! SKLabelNode
         finalScoreLabel = childNodeWithName("//finalScoreLabel") as! SKLabelNode
+        finalHiScoreLabel = childNodeWithName("//finalHiScoreLabel") as! SKLabelNode
         //anyColorNode = childNodeWithName("anyColorNode")
         //anyColorNode.hidden = true
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
