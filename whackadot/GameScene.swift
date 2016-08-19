@@ -8,7 +8,6 @@
 
 import Foundation
 import SpriteKit
-import GameKit
 
 enum GameState{ case Title, Ready, Playing, Gameover}
 var matchLabel: SKLabelNode!
@@ -59,6 +58,7 @@ class GameScene: SKScene {
         matchLabel = childNodeWithName("matchLabel") as! SKLabelNode
         finalScoreLabel = childNodeWithName("//finalScoreLabel") as! SKLabelNode
         finalHiScoreLabel = childNodeWithName("//finalHiScoreLabel") as! SKLabelNode
+        finalHiScoreLabel.text = String(gameManager.highScore)
         //anyColorNode = childNodeWithName("anyColorNode")
         //anyColorNode.hidden = true
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode

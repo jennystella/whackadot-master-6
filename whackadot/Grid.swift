@@ -68,7 +68,7 @@ class Grid: SKSpriteNode {
                         // Evaluate & Set High Score
                         if score > (gameManager.highScore) {
                             gameManager.highScore = score
-                            highScoreLabel.text = String(gameManager.highScore)
+//                            highScoreLabel.text = String(gameManager.highScore)
                             finalHiScoreLabel.text = String(gameManager.highScore)
                             
                         }

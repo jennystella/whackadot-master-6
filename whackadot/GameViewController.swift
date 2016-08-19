@@ -8,11 +8,13 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        authPlayer()
 
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
@@ -50,4 +52,31 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    //Game Center Functions
+//    
+//    
+//    func authPlayer(){
+//        let localPlayer = GKLocalPlayer.localPlayer()
+//        
+//        localPlayer.authenticateHandler = {
+//            (view, error) in
+//            
+//            if view != nil {
+//                
+//                self.presentViewController(view!, animated: true, completion: nil)
+//                
+//            }
+//            else {
+//                
+//                print(GKLocalPlayer.localPlayer().authenticated)
+//                
+//            }
+//            
+//            
+//        }
+//    }
+
+    
+    
 }
