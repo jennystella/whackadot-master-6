@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import AudioToolbox
 
 //var highScore: Int?
 //var score: Int = 50
@@ -58,8 +59,11 @@ class Grid: SKSpriteNode {
                         if colorCount <= 0 {
                             colorGoal.state = .inactive
                             
-                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            let clearColor = SKAction.playSoundFileNamed("//clearRow", waitForCompletion: false)
                             self.runAction(clearColor)
+                            
+                            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+                            
                         }
                         
                         //Add to score
@@ -73,7 +77,7 @@ class Grid: SKSpriteNode {
                             
                         }
                         
-                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        let clearDot = SKAction.playSoundFileNamed("//panBeep", waitForCompletion: false)
                         self.runAction(clearDot)
                         
                     } else if colorGoal.state != .inactive && colorGoal.state == dot.state {
@@ -85,15 +89,17 @@ class Grid: SKSpriteNode {
                         
                         //Add to score
                         score += 160
-                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        let clearDot = SKAction.playSoundFileNamed("//panBeep", waitForCompletion: false)
                         self.runAction(clearDot)
                         
                         // Check to see if there are any remaining dots of the same/goal color
                         let colorCount = countDots(dotState)
                         if colorCount <= 0 {
                             colorGoal.state = .inactive
-                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            let clearColor = SKAction.playSoundFileNamed("//clearRow", waitForCompletion: false)
                             self.runAction(clearColor)
+                            
+                            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                         }
                     } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
                         gameState = .Gameover

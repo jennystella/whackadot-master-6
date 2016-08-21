@@ -16,6 +16,8 @@
 		964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */ = {isa = PBXBuildFile; fileRef = 964B63B81D2FA3B600CCDC18 /* AnyColor.sks */; };
 		9655D92C1D2D71E700E0C1A9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92B1D2D71E700E0C1A9 /* Grid.swift */; };
 		9655D92E1D2D74BD00E0C1A9 /* Dot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9655D92D1D2D74BD00E0C1A9 /* Dot.swift */; };
+		96A9092E1D69812100A6F99F /* panBeep.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96A9092D1D69812100A6F99F /* panBeep.wav */; };
+		96A909301D6982AF00A6F99F /* clearRow.caf in Resources */ = {isa = PBXBuildFile; fileRef = 96A9092F1D6982AF00A6F99F /* clearRow.caf */; };
 		96BE3DA21D2C6E6C000D4408 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */; };
 		96BE3DA41D2C6E6C000D4408 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 96BE3DA31D2C6E6C000D4408 /* GameScene.sks */; };
 		96BE3DA61D2C6E6C000D4408 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE3DA51D2C6E6C000D4408 /* GameScene.swift */; };
@@ -25,6 +27,7 @@
 		96BE3DB01D2C6E6C000D4408 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BE3DAE1D2C6E6C000D4408 /* LaunchScreen.storyboard */; };
 		96BE3DBB1D2C6E6C000D4408 /* whackadotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE3DBA1D2C6E6C000D4408 /* whackadotTests.swift */; };
 		96BE3DC61D2C6E6D000D4408 /* whackadotUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96BE3DC51D2C6E6D000D4408 /* whackadotUITests.swift */; };
+		96CEFB181D692D2C0075F3B2 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96CEFB171D692D2C0075F3B2 /* GameKit.framework */; };
 		96F543791D6771D500E008E7 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F543781D6771D500E008E7 /* GameManager.swift */; };
 		96FE2F3E1D2DBF0E00D9951D /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F321D2DBF0E00D9951D /* CGFloat+Extensions.swift */; };
 		96FE2F3F1D2DBF0E00D9951D /* CGPoint+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FE2F331D2DBF0E00D9951D /* CGPoint+Extensions.swift */; };
@@ -68,6 +71,8 @@
 		964B63B81D2FA3B600CCDC18 /* AnyColor.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = AnyColor.sks; sourceTree = "<group>"; };
 		9655D92B1D2D71E700E0C1A9 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		9655D92D1D2D74BD00E0C1A9 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
+		96A9092D1D69812100A6F99F /* panBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = panBeep.wav; sourceTree = "<group>"; };
+		96A9092F1D6982AF00A6F99F /* clearRow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clearRow.caf; sourceTree = "<group>"; };
 		96BE3D9E1D2C6E6C000D4408 /* whackadot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whackadot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BE3DA31D2C6E6C000D4408 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		96BE3DC11D2C6E6C000D4408 /* whackadotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DC51D2C6E6D000D4408 /* whackadotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whackadotUITests.swift; sourceTree = "<group>"; };
 		96BE3DC71D2C6E6D000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		96CEFB171D692D2C0075F3B2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		96F543781D6771D500E008E7 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		96FE2F321D2DBF0E00D9951D /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
 		96FE2F331D2DBF0E00D9951D /* CGPoint+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGPoint+Extensions.swift"; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96CEFB181D692D2C0075F3B2 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +134,7 @@
 		96BE3D951D2C6E6C000D4408 = {
 			isa = PBXGroup;
 			children = (
+				96CEFB171D692D2C0075F3B2 /* GameKit.framework */,
 				96BE3DA01D2C6E6C000D4408 /* whackadot */,
 				96BE3DB91D2C6E6C000D4408 /* whackadotTests */,
 				96BE3DC41D2C6E6C000D4408 /* whackadotUITests */,
@@ -148,11 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				96BE3DA51D2C6E6C000D4408 /* GameScene.swift */,
-				96F543781D6771D500E008E7 /* GameManager.swift */,
 				96BE3DA31D2C6E6C000D4408 /* GameScene.sks */,
 				9655D92B1D2D71E700E0C1A9 /* Grid.swift */,
 				9655D92D1D2D74BD00E0C1A9 /* Dot.swift */,
 				964B63B61D2FA14F00CCDC18 /* ColorGoal.swift */,
+				96F543781D6771D500E008E7 /* GameManager.swift */,
 				96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */,
 				96BE3DA71D2C6E6C000D4408 /* GameViewController.swift */,
 				CC2F93E21D2F453D00C7A854 /* MSButtonNode.swift */,
@@ -161,6 +169,8 @@
 				964B63B81D2FA3B600CCDC18 /* AnyColor.sks */,
 				9611003A1D2FA742004CCDE5 /* AnyColorSpark.sks */,
 				9611003E1D3058A0004CCDE5 /* clearDot.wav */,
+				96A9092D1D69812100A6F99F /* panBeep.wav */,
+				96A9092F1D6982AF00A6F99F /* clearRow.caf */,
 				9611003F1D3058A0004CCDE5 /* clearColor.wav */,
 				961100421D306385004CCDE5 /* gameOver.wav */,
 				9611003B1D2FA742004CCDE5 /* spark.png */,
@@ -276,7 +286,12 @@
 				TargetAttributes = {
 					96BE3D9D1D2C6E6C000D4408 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = BZC5V9PB4N;
+						DevelopmentTeam = U7U4U44M6F;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					96BE3DB51D2C6E6C000D4408 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -313,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96A909301D6982AF00A6F99F /* clearRow.caf in Resources */,
 				96BE3DA41D2C6E6C000D4408 /* GameScene.sks in Resources */,
 				964B63B91D2FA3B600CCDC18 /* AnyColor.sks in Resources */,
 				961100411D3058A0004CCDE5 /* clearColor.wav in Resources */,
@@ -322,6 +338,7 @@
 				96BE3DB01D2C6E6C000D4408 /* LaunchScreen.storyboard in Resources */,
 				96BE3DAD1D2C6E6C000D4408 /* Assets.xcassets in Resources */,
 				961100401D3058A0004CCDE5 /* clearDot.wav in Resources */,
+				96A9092E1D69812100A6F99F /* panBeep.wav in Resources */,
 				96BE3DAB1D2C6E6C000D4408 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,9 +531,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadot;
+				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -528,9 +546,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadot;
+				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

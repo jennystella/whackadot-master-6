@@ -8,6 +8,7 @@
 
 import Foundation
 import SpriteKit
+import GameKit
 
 enum GameState{ case Title, Ready, Playing, Gameover}
 var matchLabel: SKLabelNode!
@@ -17,6 +18,7 @@ var restartButton: MSButtonNode!
 var finalScoreLabel: SKLabelNode!
 var highScoreLabel: SKLabelNode!
 var finalHiScoreLabel: SKLabelNode!
+var gameCenter: MSButtonNode!
 
 var score: Int = 0 {
 didSet {
@@ -24,7 +26,7 @@ didSet {
 }
 }
 var gameState: GameState = .Title
-var highScore: Int?
+
 
 let colorGoal = ColorGoal()
 var spark: Bool = false{
@@ -35,7 +37,7 @@ didSet {
 
 let gameManager = GameManager.sharedInstance
 
-class GameScene: SKScene {
+class GameScene: SKScene, GKGameCenterControllerDelegate {
     
     var gridNode: Grid!
     
@@ -64,8 +66,10 @@ class GameScene: SKScene {
         restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
         restartMenu.hidden = true
         
-        
         restartButton = childNodeWithName("restartButton") as! MSButtonNode
+        gameCenter = childNodeWithName("//gameCenter") as! MSButtonNode
+        
+        
         /* Setup restart button selection handler */
         restartButton.selectedHandler = {
             
@@ -87,6 +91,12 @@ class GameScene: SKScene {
         }
         /* Hide restart button */
         restartButton.state = .Hidden
+        
+        /* Setup restart button selection handler */
+        gameCenter.selectedHandler = {
+            
+            self.showLeaderBoard()
+        }
         
         /* Create an SKAction based timer, 0.5 second delay */
         let delay = SKAction.waitForDuration(0.35)
@@ -140,6 +150,17 @@ class GameScene: SKScene {
         gameState = .Gameover
         
         
+        // Evaluate & Set High Score
+        if score > (gameManager.highScore) {
+            gameManager.highScore = score
+            //                            highScoreLabel.text = String(gameManager.highScore)
+            finalHiScoreLabel.text = String(gameManager.highScore)
+            
+        }
+        
+        
+        // Add to the leaderboard
+        saveHighscore(score)
         
         finalScoreLabel.text = String(score)
         //Reseting the colour of the circle and removing when game is over
@@ -172,7 +193,38 @@ class GameScene: SKScene {
         
     }
 
+    func saveHighscore(number : Int){
+        
+        if GKLocalPlayer.localPlayer().authenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "leaderboard")
+            
+            scoreReporter.value = Int64(number)
+            
+            let scoreArray : [GKScore] = [scoreReporter]
+            
+            GKScore.reportScores(scoreArray, withCompletionHandler: nil)
+            
+        }
+        
+        
+    }
     
+    
+    func showLeaderBoard(){
+        let viewController = self.view!.window?.rootViewController
+        let gcvc = GKGameCenterViewController()
+        
+        gcvc.gameCenterDelegate = self
+        
+        viewController?.presentViewController(gcvc, animated: true, completion: nil)
+    }
+    
+
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
 }
 
