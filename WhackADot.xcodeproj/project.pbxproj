@@ -82,10 +82,10 @@
 		96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96BE3DAF1D2C6E6C000D4408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96BE3DB11D2C6E6C000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BE3DB61D2C6E6C000D4408 /* whackadot.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadot.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BE3DB61D2C6E6C000D4408 /* whackadotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DBA1D2C6E6C000D4408 /* whackadotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whackadotTests.swift; sourceTree = "<group>"; };
 		96BE3DBC1D2C6E6C000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BE3DC11D2C6E6C000D4408 /* whackadot.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadot.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BE3DC11D2C6E6C000D4408 /* whackadotUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadotUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DC51D2C6E6D000D4408 /* whackadotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whackadotUITests.swift; sourceTree = "<group>"; };
 		96BE3DC71D2C6E6D000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CEFB171D692D2C0075F3B2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -146,8 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				96BE3D9E1D2C6E6C000D4408 /* whackadot.app */,
-				96BE3DB61D2C6E6C000D4408 /* whackadot.xctest */,
-				96BE3DC11D2C6E6C000D4408 /* whackadot.xctest */,
+				96BE3DB61D2C6E6C000D4408 /* whackadotTests.xctest */,
+				96BE3DC11D2C6E6C000D4408 /* whackadotUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -253,7 +253,7 @@
 			);
 			name = whackadotTests;
 			productName = whackadotTests;
-			productReference = 96BE3DB61D2C6E6C000D4408 /* whackadot.xctest */;
+			productReference = 96BE3DB61D2C6E6C000D4408 /* whackadotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		96BE3DC01D2C6E6C000D4408 /* whackadotUITests */ = {
@@ -271,7 +271,7 @@
 			);
 			name = whackadotUITests;
 			productName = whackadotUITests;
-			productReference = 96BE3DC11D2C6E6C000D4408 /* whackadot.xctest */;
+			productReference = 96BE3DC11D2C6E6C000D4408 /* whackadotUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
-				PRODUCT_NAME = whackadot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -547,7 +547,7 @@
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
-				PRODUCT_NAME = whackadot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -561,8 +561,8 @@
 				INFOPLIST_FILE = whackadotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotTests;
-				PRODUCT_NAME = whackadot;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot.app/whackadot";
 			};
 			name = Debug;
 		};
@@ -573,8 +573,8 @@
 				INFOPLIST_FILE = whackadotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotTests;
-				PRODUCT_NAME = whackadot;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot.app/whackadot";
 			};
 			name = Release;
 		};
@@ -585,7 +585,7 @@
 				INFOPLIST_FILE = whackadotUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotUITests;
-				PRODUCT_NAME = whackadot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = whackadot;
 			};
 			name = Debug;
@@ -596,7 +596,7 @@
 				INFOPLIST_FILE = whackadotUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotUITests;
-				PRODUCT_NAME = whackadot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = whackadot;
 			};
 			name = Release;
