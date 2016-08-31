@@ -73,7 +73,7 @@
 		9655D92D1D2D74BD00E0C1A9 /* Dot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dot.swift; sourceTree = "<group>"; };
 		96A9092D1D69812100A6F99F /* panBeep.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = panBeep.wav; sourceTree = "<group>"; };
 		96A9092F1D6982AF00A6F99F /* clearRow.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = clearRow.caf; sourceTree = "<group>"; };
-		96BE3D9E1D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BE3D9E1D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DA11D2C6E6C000D4408 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96BE3DA31D2C6E6C000D4408 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		96BE3DA51D2C6E6C000D4408 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -82,10 +82,10 @@
 		96BE3DAC1D2C6E6C000D4408 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96BE3DAF1D2C6E6C000D4408 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96BE3DB11D2C6E6C000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BE3DB61D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BE3DB61D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DBA1D2C6E6C000D4408 /* whackadotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whackadotTests.swift; sourceTree = "<group>"; };
 		96BE3DBC1D2C6E6C000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96BE3DC11D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		96BE3DC11D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96BE3DC51D2C6E6D000D4408 /* whackadotUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whackadotUITests.swift; sourceTree = "<group>"; };
 		96BE3DC71D2C6E6D000D4408 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96CEFB171D692D2C0075F3B2 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
@@ -145,9 +145,9 @@
 		96BE3D9F1D2C6E6C000D4408 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				96BE3D9E1D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
-				96BE3DB61D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */,
-				96BE3DC11D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */,
+				96BE3D9E1D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */,
+				96BE3DB61D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */,
+				96BE3DC11D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -235,7 +235,7 @@
 			);
 			name = whackadot;
 			productName = whackadot;
-			productReference = 96BE3D9E1D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
+			productReference = 96BE3D9E1D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app */;
 			productType = "com.apple.product-type.application";
 		};
 		96BE3DB51D2C6E6C000D4408 /* whackadotTests */ = {
@@ -253,7 +253,7 @@
 			);
 			name = whackadotTests;
 			productName = whackadotTests;
-			productReference = 96BE3DB61D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */;
+			productReference = 96BE3DB61D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		96BE3DC01D2C6E6C000D4408 /* whackadotUITests */ = {
@@ -271,7 +271,7 @@
 			);
 			name = whackadotUITests;
 			productName = whackadotUITests;
-			productReference = 96BE3DC11D2C6E6C000D4408 /* WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */;
+			productReference = 96BE3DC11D2C6E6C000D4408 /* whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -303,7 +303,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 96BE3D991D2C6E6C000D4408 /* Build configuration list for PBXProject "WhackADot" */;
+			buildConfigurationList = 96BE3D991D2C6E6C000D4408 /* Build configuration list for PBXProject "whackadot" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -532,7 +532,7 @@
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -547,7 +547,7 @@
 				INFOPLIST_FILE = whackadot/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = TJinc.whackadot;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -561,8 +561,8 @@
 				INFOPLIST_FILE = whackadotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotTests;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app/WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename";
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app/whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename";
 			};
 			name = Debug;
 		};
@@ -573,8 +573,8 @@
 				INFOPLIST_FILE = whackadotTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotTests;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app/WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename";
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.app/whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename";
 			};
 			name = Release;
 		};
@@ -585,7 +585,7 @@
 				INFOPLIST_FILE = whackadotUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotUITests;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				TEST_TARGET_NAME = whackadot;
 			};
 			name = Debug;
@@ -596,7 +596,7 @@
 				INFOPLIST_FILE = whackadotUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.TJinc.whackadotUITests;
-				PRODUCT_NAME = WhackADot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
+				PRODUCT_NAME = whackadot.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename.temp_caseinsensitive_rename;
 				TEST_TARGET_NAME = whackadot;
 			};
 			name = Release;
@@ -604,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		96BE3D991D2C6E6C000D4408 /* Build configuration list for PBXProject "WhackADot" */ = {
+		96BE3D991D2C6E6C000D4408 /* Build configuration list for PBXProject "whackadot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				96BE3DC81D2C6E6D000D4408 /* Debug */,
