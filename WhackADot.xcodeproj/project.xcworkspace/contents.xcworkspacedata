@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:whackadot.xcodeproj">
+      location = "self:/Users/Tassos/Dropbox/Code/whackadot-master-6/WhackADot.xcodeproj">
    </FileRef>
 </Workspace>
