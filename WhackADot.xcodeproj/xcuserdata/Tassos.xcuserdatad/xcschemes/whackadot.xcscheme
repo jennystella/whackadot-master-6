@@ -17,7 +17,7 @@
                BlueprintIdentifier = "96BE3D9D1D2C6E6C000D4408"
                BuildableName = "whackadot.app"
                BlueprintName = "whackadot"
-               ReferencedContainer = "container:whackadot.xcodeproj">
+               ReferencedContainer = "container:WhackADot.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "96BE3D9D1D2C6E6C000D4408"
             BuildableName = "whackadot.app"
             BlueprintName = "whackadot"
-            ReferencedContainer = "container:whackadot.xcodeproj">
+            ReferencedContainer = "container:WhackADot.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "96BE3D9D1D2C6E6C000D4408"
             BuildableName = "whackadot.app"
             BlueprintName = "whackadot"
-            ReferencedContainer = "container:whackadot.xcodeproj">
+            ReferencedContainer = "container:WhackADot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "96BE3D9D1D2C6E6C000D4408"
             BuildableName = "whackadot.app"
             BlueprintName = "whackadot"
-            ReferencedContainer = "container:whackadot.xcodeproj">
+            ReferencedContainer = "container:WhackADot.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
