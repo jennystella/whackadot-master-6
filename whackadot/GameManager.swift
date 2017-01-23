@@ -9,19 +9,19 @@ import Foundation
 
 class GameManager {
     static let sharedInstance = GameManager()
-    var name: String = NSUserDefaults.standardUserDefaults().stringForKey("myName") ?? "User" {
+    var name: String = UserDefaults.standard.string(forKey: "myName") ?? "User" {
         didSet {
-            NSUserDefaults.standardUserDefaults().setObject(name, forKey:"myName")
+            UserDefaults.standard.set(name, forKey:"myName")
             // Saves to disk immediately, otherwise it will save when it has time
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.synchronize()
         }
     }
     
-    var highScore: Int = NSUserDefaults.standardUserDefaults().integerForKey("myHighScore") ?? 0 {
+    var highScore: Int = UserDefaults.standard.integer(forKey: "myHighScore") ?? 0 {
         didSet {
-            NSUserDefaults.standardUserDefaults().setInteger(highScore, forKey:"myHighScore")
+            UserDefaults.standard.set(highScore, forKey:"myHighScore")
             // Saves to disk immediately, otherwise it will save when it has time
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.synchronize()
         }
     }
 }

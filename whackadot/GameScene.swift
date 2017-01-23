@@ -10,7 +10,7 @@ import Foundation
 import SpriteKit
 import GameKit
 
-enum GameState{ case Title, Ready, Playing, Gameover}
+enum GameState{ case title, ready, playing, gameover}
 var matchLabel: SKLabelNode!
 var scoreLabel: SKLabelNode!
 var restartMenu: SKSpriteNode!
@@ -25,7 +25,7 @@ didSet {
     scoreLabel.text = String(score)
 }
 }
-var gameState: GameState = .Title
+var gameState: GameState = .title
 
 
 let colorGoal = ColorGoal()
@@ -45,7 +45,7 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
     //var anyColorNode: SKNode!
     
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         scene?.addChild(colorGoal)
     
 
@@ -53,21 +53,21 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
         /* Setup your scene here */
 
 
-        gameState = .Ready
+        gameState = .ready
         
-        gridNode = childNodeWithName("gridNode") as! Grid
-        scoreLabel = childNodeWithName("scoreLabel") as! SKLabelNode
-        matchLabel = childNodeWithName("matchLabel") as! SKLabelNode
-        finalScoreLabel = childNodeWithName("//finalScoreLabel") as! SKLabelNode
-        finalHiScoreLabel = childNodeWithName("//finalHiScoreLabel") as! SKLabelNode
+        gridNode = childNode(withName: "gridNode") as! Grid
+        scoreLabel = childNode(withName: "scoreLabel") as! SKLabelNode
+        matchLabel = childNode(withName: "matchLabel") as! SKLabelNode
+        finalScoreLabel = childNode(withName: "//finalScoreLabel") as! SKLabelNode
+        finalHiScoreLabel = childNode(withName: "//finalHiScoreLabel") as! SKLabelNode
         finalHiScoreLabel.text = String(gameManager.highScore)
         //anyColorNode = childNodeWithName("anyColorNode")
         //anyColorNode.hidden = true
-        restartMenu = childNodeWithName("restartMenu") as! SKSpriteNode
-        restartMenu.hidden = true
+        restartMenu = childNode(withName: "restartMenu") as! SKSpriteNode
+        restartMenu.isHidden = true
         
-        restartButton = childNodeWithName("restartButton") as! MSButtonNode
-        gameCenter = childNodeWithName("//gameCenter") as! MSButtonNode
+        restartButton = childNode(withName: "restartButton") as! MSButtonNode
+        gameCenter = childNode(withName: "//gameCenter") as! MSButtonNode
         
         
         /* Setup restart button selection handler */
@@ -83,14 +83,14 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
             score = 0
             
             /* Ensure correct aspect mode */
-            scene.scaleMode = .AspectFit
+            scene?.scaleMode = .aspectFit
             
             /* Restart game scene */
-            skView.presentScene(scene)
+            skView?.presentScene(scene)
             
         }
         /* Hide restart button */
-        restartButton.state = .Hidden
+        restartButton.state = .hidden
         
         /* Setup restart button selection handler */
         gameCenter.selectedHandler = {
@@ -99,33 +99,33 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
         }
         
         /* Create an SKAction based timer, 0.5 second delay */
-        let delay = SKAction.waitForDuration(0.35)
+        let delay = SKAction.wait(forDuration: 0.35)
         
         /* Call the stepSimulation() method to advance the simulation */
-        let callMethod = SKAction.performSelector(#selector(GameScene.time), onTarget: self)
+        let callMethod = SKAction.perform(#selector(GameScene.time), onTarget: self)
         
         /* Create the delay,step cycle */
         let stepSequence = SKAction.sequence([delay,callMethod])
         
         /* Create an infinite simulation loop */
-        let simulation = SKAction.repeatActionForever(stepSequence)
+        let simulation = SKAction.repeatForever(stepSequence)
         
         /* Run simulation action */
-        self.runAction(simulation)
+        self.run(simulation)
         
         /* Default simulation to pause state */
-        self.paused = false
+        self.isPaused = false
         
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         if gridNode.countDots(.inactive) == 0 {
             gameover()
@@ -136,7 +136,7 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
     func time () {
         
         //Makes the game unable to spawn dots once game is over
-        if gameState == .Gameover{return}
+        if gameState == .gameover{return}
         
         
         gridNode.addDotToEmptyGrid()
@@ -147,7 +147,7 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
 
     func gameover(){
         
-        gameState = .Gameover
+        gameState = .gameover
         
         
         // Evaluate & Set High Score
@@ -177,25 +177,25 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
         /* Ensure correct aspect mode */
         
         
-        scene.scaleMode = .AspectFit
-        restartMenu.hidden = false
-        restartButton.state = .Active
+        scene?.scaleMode = .aspectFit
+        restartMenu.isHidden = false
+        restartButton.state = .active
 
         
-        if restartButton.state == .Hidden{
+        if restartButton.state == .hidden{
             /* Restart GameScene */
-            skView.presentScene(scene)
+            skView?.presentScene(scene)
             
             /* Start game */
-            gameState = .Ready
+            gameState = .ready
             
         }
         
     }
 
-    func saveHighscore(number : Int){
+    func saveHighscore(_ number : Int){
         
-        if GKLocalPlayer.localPlayer().authenticated {
+        if GKLocalPlayer.localPlayer().isAuthenticated {
             
             let scoreReporter = GKScore(leaderboardIdentifier: "leaderboard")
             
@@ -203,7 +203,7 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
             
             let scoreArray : [GKScore] = [scoreReporter]
             
-            GKScore.reportScores(scoreArray, withCompletionHandler: nil)
+            GKScore.report(scoreArray, withCompletionHandler: nil)
             
         }
         
@@ -217,12 +217,12 @@ class GameScene: SKScene, GKGameCenterControllerDelegate {
         
         gcvc.gameCenterDelegate = self
         
-        viewController?.presentViewController(gcvc, animated: true, completion: nil)
+        viewController?.present(gcvc, animated: true, completion: nil)
     }
     
 
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
         
     }
     

@@ -23,36 +23,36 @@ class Dot: SKSpriteNode {
             
             switch state {
             case .inactive:
-                hidden = true
+                isHidden = true
                 
             case .color1:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot1"))
-                runAction(action)
-                hidden = false
+                run(action)
+                isHidden = false
                 break;
                 
             case .color2:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot2"))
-                runAction(action)
-                hidden = false
+                run(action)
+                isHidden = false
                 break;
                 
             case .color3:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot3"))
-                runAction(action)
-                hidden = false
+                run(action)
+                isHidden = false
                 break;
                 
             case .color4:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot4"))
-                runAction(action)
-                hidden = false
+                run(action)
+                isHidden = false
                 break;
             
             case .color5:
                 let action = SKAction.setTexture(SKTexture(imageNamed: "Dot5"))
-                runAction(action)
-                hidden = false
+                run(action)
+                isHidden = false
                 break;
             
             }
@@ -72,8 +72,8 @@ class Dot: SKSpriteNode {
     init() {
         /* Initialize with 'dot' asset */
         let texture = SKTexture(imageNamed: "Dot1")
-        super.init(texture: texture, color: UIColor.clearColor(), size: texture.size())
-        hidden = true
+        super.init(texture: texture, color: UIColor.clear, size: texture.size())
+        isHidden = true
         
         size.height = 60
         size.width = 60

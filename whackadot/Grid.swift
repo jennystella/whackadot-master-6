@@ -27,15 +27,15 @@ class Grid: SKSpriteNode {
     /* dot Array */
     var gridArray = [[Dot]]()
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         /* Called when a touch begins */
         
         /* There will only be one touch as multi touch is not enabled by default */
-        if gameState != .Gameover {
+        if gameState != .gameover {
             for touch in touches {
                 
                 /* Grab position of touch relative to the grid */
-                let location  = touch.locationInNode(self)
+                let location  = touch.location(in: self)
                 
                 /* Calculate grid array position */
                 let gridX = Int(location.x) / cellWidth
@@ -59,8 +59,8 @@ class Grid: SKSpriteNode {
                         if colorCount <= 0 {
                             colorGoal.state = .inactive
                             
-                            let clearColor = SKAction.playSoundFileNamed("//clearRow", waitForCompletion: false)
-                            self.runAction(clearColor)
+                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            self.run(clearColor)
                             
                             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                             
@@ -77,8 +77,8 @@ class Grid: SKSpriteNode {
                             
                         }
                         
-                        let clearDot = SKAction.playSoundFileNamed("//panBeep", waitForCompletion: false)
-                        self.runAction(clearDot)
+                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        self.run(clearDot)
                         
                     } else if colorGoal.state != .inactive && colorGoal.state == dot.state {
                         
@@ -89,22 +89,22 @@ class Grid: SKSpriteNode {
                         
                         //Add to score
                         score += 160
-                        let clearDot = SKAction.playSoundFileNamed("//panBeep", waitForCompletion: false)
-                        self.runAction(clearDot)
+                        let clearDot = SKAction.playSoundFileNamed("//clearDot", waitForCompletion: false)
+                        self.run(clearDot)
                         
                         // Check to see if there are any remaining dots of the same/goal color
                         let colorCount = countDots(dotState)
                         if colorCount <= 0 {
                             colorGoal.state = .inactive
-                            let clearColor = SKAction.playSoundFileNamed("//clearRow", waitForCompletion: false)
-                            self.runAction(clearColor)
+                            let clearColor = SKAction.playSoundFileNamed("//clearColor", waitForCompletion: false)
+                            self.run(clearColor)
                             
                             AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
                         }
                     } else if colorGoal.state != .inactive && colorGoal.state != dot.state {
-                        gameState = .Gameover
+                        gameState = .gameover
                         let gameOver = SKAction.playSoundFileNamed("//gameOver", waitForCompletion: false)
-                        self.runAction(gameOver)
+                        self.run(gameOver)
                         GameScene().gameover()
                     }
                 }
@@ -119,7 +119,7 @@ class Grid: SKSpriteNode {
         super.init(coder: aDecoder)
         
         /* Enable own touch implefmentation for this node */
-        userInteractionEnabled = true
+        isUserInteractionEnabled = true
         
         /* Calculate individual cell dimensions */
         cellWidth = Int(size.width) / columns
@@ -146,7 +146,7 @@ class Grid: SKSpriteNode {
         }
     }
     
-    func addDotAtGrid(x x: Int, y: Int) {
+    func addDotAtGrid(x: Int, y: Int) {
         //Initialize a new dot object
         let dot = Dot()
         
@@ -208,7 +208,7 @@ class Grid: SKSpriteNode {
     
     
     
-    func countDots(dotstate: DotColor) -> Int{
+    func countDots(_ dotstate: DotColor) -> Int{
         /* Process array and update dot status */
         var population: Int = 0
         
